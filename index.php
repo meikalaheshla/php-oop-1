@@ -10,7 +10,11 @@ $this->title = $_title;
 $this->movie_director = $_movie_director;
 $this->genre = $_genre;
 }
+public function getMovieInfo()
+{
+return "$this->title $this->movie_director $this->genre";
 
+}
 
 }
 $movie1 = new Movie('Il signore degli anelli','Peter Jackson', 'fantasy' );
@@ -33,13 +37,13 @@ $movie2 = new Movie('spiderman','Peter pokemon', 'triller' );
     <title>Document</title>
 </head>
 <body>
-    <?php foreach($movies as $movie)?>
     <h1><?= $movie1->title ?></h1>
     <h2><?= $movie1->movie_director ?></h2>
     <p><?= $movie1->genre ?></p>
+    <p><?= $movie1->getMovieInfo() ?></p>
     <h1><?= $movie2->title ?></h1>
     <h2><?= $movie2->movie_director ?></h2>
     <p><?= $movie2->genre ?></p>
-    
+    <p><?= $movie2->getMovieInfo() ?></p>
 </body>
 </html>
